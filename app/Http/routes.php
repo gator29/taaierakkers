@@ -1,5 +1,7 @@
 <?php
 
+use App\Task;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -19,6 +21,8 @@ Route::get('/admin', function(){
 	return view('admin');
 });
 
+Route::post('/story', 'AdminController@storeStory');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -33,5 +37,5 @@ Route::get('/admin', function(){
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/admin', 'HomeController@index');
+    Route::get('/admin', 'AdminController@index');
 });
