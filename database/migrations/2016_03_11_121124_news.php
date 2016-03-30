@@ -16,7 +16,6 @@ class News extends Migration
             $table->increments('id');
             $table->string('title')->unique();
             $table->text('report');
-            $table->integer('img_id');
             $table->timestamps();
             $table->softDeletes();
         });

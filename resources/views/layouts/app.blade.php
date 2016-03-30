@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Stichting Taaie Rakkers</title>
+
+    <!-- scripts -->
+    <script src="http://localhost:8000/ckeditor/ckeditor.js"></script>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -47,7 +50,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('story') }}">Verhalen</a></li>
+                    <li><a href="{{ url('news') }}">Nieuws</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -62,6 +67,8 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/register') }}">Registreer een admin</a></li>
+                                <li><a href="{{ url('/admin') }}">Maak Verhaal</a></li>
+                                <li><a href="{{ url('/news/add') }}">Maak Nieuws</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
